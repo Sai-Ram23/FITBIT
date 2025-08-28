@@ -1,0 +1,4 @@
+tkinter
+bcrypt
+requests
+python-dotenv
