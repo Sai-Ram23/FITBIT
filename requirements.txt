@@ -1,0 +1,6 @@
+bcrypt
+requests
+python-dotenv
+google-generativeai
+matplotlib
+pytest

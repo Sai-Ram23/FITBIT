@@ -1,0 +1,239 @@
+{
+    "Running": {
+        "food_taken": {
+            "0-15": [
+                "Banana",
+                "whole grain toast with almond butter",
+                "a small bowl of oatmeal"
+            ],
+            "16-30": [
+                "Protein shake",
+                "Greek yogurt with berries",
+                "a turkey wrap with vegetables"
+            ],
+            "31-inf": [
+                "Whole grain cereal with low-fat milk",
+                "a small turkey sandwich",
+                "a fruit smoothie"
+            ]
+        },
+        "water_intake": 800
+    },
+    "Walking": {
+        "food_taken": {
+            "0-15": [
+                "Apple slices with peanut butter",
+                "a handful of nuts",
+                "a small granola bar"
+            ],
+            "16-30": [
+                "Whole grain toast with avocado",
+                "a small bowl of muesli with fruits",
+                "boiled egg with whole grain crackers"
+            ],
+            "31-inf": [
+                "Whole grain cereal with low-fat milk",
+                "a small turkey sandwich",
+                "a fruit smoothie"
+            ]
+        },
+        "water_intake": 1000
+    },
+    "Swimming": {
+        "food_taken": {
+            "0-15": [
+                "Whole grain cereal with low-fat milk",
+                "a fruit smoothie"
+            ],
+            "16-30": [
+                "Grilled fish with steamed vegetables",
+                "a protein-rich salad"
+            ],
+            "31-inf": [
+                "a chicken and vegetable stir-fry",
+                "a small turkey sandwich",
+                "a fruit smoothie"
+            ]
+        },
+        "water_intake": 1000
+    },
+    "Weight Lifting": {
+        "food_taken": {
+            "0-15": [
+                "Greek yogurt with a tablespoon of honey",
+                "a handful of almonds",
+                "a protein bar"
+            ],
+            "16-30": [
+                "Grilled chicken breast with sweet potatoes",
+                "a protein shake with a banana",
+                "a quinoa and vegetable bowl"
+            ],
+            "31-inf": [
+                "Grilled lean meat or plant-based protein with whole grain pasta and marinara sauce",
+                "a protein smoothie with banana and peanut butter",
+                "a turkey and vegetable wrap"
+            ]
+        },
+        "water_intake": 1300
+    },
+    "Cycling": {
+        "food_taken": {
+            "0-15": [
+                "Whole grain toast with avocado",
+                "a small bowl of muesli with fruits",
+                "a boiled egg with whole grain crackers"
+            ],
+            "16-30": [
+                "Grilled salmon with quinoa and vegetables",
+                "a protein smoothie with spinach",
+                "a chicken wrap with salad"
+            ],
+            "31-inf": [
+                "Baked salmon with quinoa and roasted vegetables",
+                "a protein bar",
+                "a chicken stir-fry with brown rice and mixed vegetables"
+            ]
+        },
+        "water_intake": 2000
+    },
+    "HIIT": {
+        "food_taken": {
+            "0-15": [
+                "Whole grain toast with avocado",
+                "a small handful of nuts",
+                "a fruit smoothie with protein powder"
+            ],
+            "16-30": [
+                "Grilled chicken breast with quinoa and roasted vegetables",
+                "a protein shake with berries",
+                "a spinach salad with tofu"
+            ],
+            "31-inf": [
+                "Apple slices with almond butter",
+                "a small portion of cottage cheese with fruit",
+                "a veggie omelet"
+            ]
+        },
+        "water_intake": 1800
+    },
+    "Yoga": {
+        "food_taken": {
+            "0-15": [
+                "Apple slices with almond butter",
+                "a small portion of cottage cheese with fruit",
+                "a veggie omelet"
+            ],
+            "16-30": [
+                "Grilled fish with brown rice and steamed vegetables",
+                "a protein smoothie with chia seeds"
+            ],
+            "31-inf": [
+                "a mixed greens salad with grilled chicken"
+            ]
+        },
+        "water_intake": 500
+    },
+    "Cross Fit": {
+        "food_taken": {
+            "0-15": [
+                "Whole grain cereal with low-fat milk",
+                "a small turkey or chicken sandwich",
+                "a fruit and yogurt smoothie"
+            ],
+            "16-30": [
+                "Baked salmon with quinoa and roasted vegetables",
+                "a protein bar"
+            ],
+            "31-inf": [
+                "chicken stir-fry with brown rice and mixed vegetables"
+            ]
+        },
+        "water_intake": 2000
+    },
+    "Pilates": {
+        "food_taken": {
+            "0-15": [
+                "Whole grain toast with almond butter and sliced banana",
+                "a small portion of brown rice with grilled chicken"
+            ],
+            "16-30": [
+                "Grilled shrimp or tofu with whole wheat noodles and stir-fried vegetables",
+                "a protein shake with almond milk"
+            ],
+            "31-inf": [
+                "a fruit smoothie with added protein",
+                "a quinoa and black bean salad"
+            ]
+        },
+        "water_intake": 1000
+    },
+    "Circuit Training": {
+        "food_taken": {
+            "0-15": [
+                "Mixed fruit salad with Greek yogurt",
+                "a small portion of whole grain pasta with marinara sauce"
+            ],
+            "16-30": [
+                "Grilled salmon with quinoa and steamed vegetables",
+                "a protein smoothie with almond milk and spinach"
+            ],
+            "31-inf": [
+                "a vegetable and tofu stir-fry",
+                "a chicken and vegetable wrap"
+            ]
+        },
+        "water_intake": 500
+    },
+    "Kick boxing": {
+        "food_taken": {
+            "0-15": [
+                "Whole grain bagel with low-fat cream cheese",
+                "a small portion of brown rice with grilled chicken or fish"
+            ],
+            "16-30": [
+                "Grilled lean meat or plant-based protein with whole grain pasta and marinara sauce"
+            ],
+            "31-inf": [
+                "a vegetable and bean burrito",
+                "a protein smoothie with banana and peanut butter",
+                "a turkey and vegetable wrap"
+            ]
+        },
+        "water_intake": 800
+    },
+    "Zumba": {
+        "food_taken": {
+            "0-15": [
+                "Mixed fruit salad with Greek yogurt",
+                "a small portion of whole grain pasta with marinara sauce"
+            ],
+            "16-30": [
+                "Grilled salmon with quinoa and steamed vegetables",
+                "a protein smoothie with almond milk and spinach"
+            ],
+            "31-inf": [
+                "a vegetable and tofu stir-fry",
+                "a chicken and vegetable wrap"
+            ]
+        },
+        "water_intake": 250
+    },
+    "Basketball": {
+        "food_taken": {
+            "0-15": [
+                "Whole grain bagel with low-fat cream cheese",
+                "a small portion of brown rice with grilled chicken or fish"
+            ],
+            "16-30": [
+                "Grilled lean meat or plant-based protein with whole grain pasta and marinara sauce"
+            ],
+            "31-inf": [
+                "a vegetable and bean burrito",
+                "a protein smoothie with banana and peanut butter",
+                "a turkey and vegetable wrap"
+            ]
+        },
+        "water_intake": 600
+    }
+}

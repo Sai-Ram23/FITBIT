@@ -1,75 +1,149 @@
-# Fitbit Application
+# Fitbit AI Workout Logger
 
 ## Overview
-The Fitbit Application is a Python-based desktop application built with Tkinter that allows users to log workouts, view recommended food intake, and track water consumption based on workout type and duration. The application integrates with the Fitbit API to log workout data and includes a secure login system.
+The Fitbit AI Workout Logger is a modular, AI-enhanced desktop application built with Python and Tkinter for tracking workouts, generating personalized recommendations, and integrating with Fitbit and Google's Gemini API. It supports multi-user profiles, secure authentication, data analytics, and visualizations, making it a comprehensive fitness companion.
 
-## Features
-- User authentication with secure credential validation
-- Workout logging with support for multiple workout types
-- Display of recommended food and water intake based on workout duration
-- Integration with Fitbit API for workout tracking
-- Modular and maintainable codebase with unit tests
-- Logging for debugging and monitoring
+## Key Features
+- > Secure Authentication: User login/signup with bcrypt-hashed passwords and SQLite storage. Multi-user support with profile data (age, weight, goals) for personalization.
+- > Workout Logging: Log workouts with name and duration; auto-generates food/water intake recommendations from a JSON config.
+- > AI Personalization (Gemini Integration): Tailored tips and plans based on profile/history using Google's Gemini API (e.g., "recovery advice for weight loss goals").
+- > Chat Interface: Real-time "Ask AI" chat for workout queries, leveraging user profile for context-aware responses.
+- > Fitbit API Sync: Logs workouts to Fitbit (dual-mode: real/simulated based on token).
+- > Data Analytics: Stores logs in SQLite; Gemini analyzes trends (e.g., weekly summaries and improvements).
+- > Visualizations: Matplotlib-embedded charts for workout trends (e.g., bar graphs of duration over time) with AI insights.
+- > Modular Architecture: Separation of concerns (UI, core logic, integrations, auth) for maintainability and testing.
+- > The app operates in dual mode: Core features work offline (JSON/DB), while APIs enhance with real-time data.
 
-## Requirements
-- Python 3.8 or higher
-- Dependencies listed in `requirements.txt`
+## Prerequisites
+Python 3.8+ (tested on 3.13).
+Git for version control.
+A Fitbit account for API access (optional for simulation mode).
+Google AI Studio API key for Gemini (free tier sufficient).
 
 ## Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/SaiRam23/FITBIT.git
-   cd FITBIT
+Clone the Repository:
+```bash
+git clone https://github.com/Sai-Ram23/FITBIT.git
+cd FITBIT
+```
 
-2. Create a virtual environment and activate it.
-    ```bash
-    python -m venv venv
-    venv\Scripts\activate  # On Windows
-    source venv/bin/activate  # On Mac
+# Create a Virtual Environment (Recommended):
+```bash
+python -m venv venv
+```
+# On Windows:
+```bash
+venv\Scripts\activate
+```
+# On macOS/Linux:
+```bash
+source venv/bin/activate
+```
 
-3. Install dependencies
-    ```bash
-    pip install -r requirements.txt
+# Install Dependencies:
+```bash
+pip install -r requirements.txt
+```
 
-4. Set up environment variable (e.g., FITBIT API Keys) in a .env file
-    ```plaintext
-    FITBIT_ACCESS_TOKEN=your_fitbit_access_token
+Configure Environment Variables:
+```bash
+new-item .env
+```
 
-5. Ensure the config/workouts.json file is configtured with appropriate workout data.
+Edit .env:
+```bash
+FITBIT_ACCESS_TOKEN=your_fitbit_access_token_here  # From Fitbit OAuth (optional)
+GOOGLE_AI_API_KEY=your_gemini_api_key_here  # From https://aistudio.google.com/app/apikey
+```
 
-## Usage
-1. Run the application
-    ```bash
-    python -m main
+Note: Never commit .env (ignored in .gitignore).
 
-2. log in using valid credentials
+Database Setup: The app auto-initializes users.db on first run (SQLite—no separate setup).
+Run the Application:
+```bash
+python main.py
+```
 
-3. Enter workout details (name and duration) to log a workout and view recommendations
+Signup with profile details → Login → Log workouts → Use chat/analytics.
 
-4. Check the fitbit_app.log file for logs and debugging information
+# Usage
+## Signup/Login:
+Enter username/password.
+On signup, provide age, weight (kg), goals (e.g., "weight loss").
+Profiles personalize AI recommendations.
 
+## Log a Workout:
+
+Enter workout name (e.g., "Walking") and duration (minutes).
+Click "Log Workout": Views static recs (food/water), Fitbit sync, personalized AI tip, and trend analysis.
+
+## AI Chat:
+
+Click "Ask AI Chat".
+Type queries (e.g., "Tip for running?")—responses use your profile/history.
+
+## Analytics & Visualizations:
+
+Click "View Analytics & Chart": Displays Matplotlib bar chart of recent workouts + Gemini summary (e.g., "Increase cardio for goals").
+
+AI Personalized Rec: [Gemini tip based on your age/weight/goals]
+Trend Analysis: [Gemini summary of trends]
 ## Project Structure
--> src/: Source code
-    -> auth/: Authentication logic (credential validation, user database)
-    -> workout/: Workout logging and configuration logic
-    -> ui/: Tkinter UI components (login and main windows)
-    -> utils/: Utility functions (e.g., logging)
--> config/: Configuration files (e.g., workouts.json)
--> tests/: Unit tests for authentication, workout logic, and UI
--> fitbit_app.log: Application log file
--> requirements.txt: Python dependencies
--> main.py: Application entry point
+```structure
+FITBIT/
+├── .env.example          # Secrets template
+├── .gitignore            # Ignores .env, .db, etc.
+├── main.py               # Entry point
+├── requirements.txt      # Dependencies
+├── config/
+│   └── workouts.json     # Static food/water recs
+├── ui/                   # Tkinter UIs
+│   ├── login.py          # Auth UI with profile signup
+│   ├── main.py           # Workout/chat/analytics UI
+│   └── chat.py           # AI chat window
+├── core/                 # Business logic
+│   ├── recommendations.py # JSON-based recs (personalized)
+│   └── analytics.py      # DB logging + Gemini analysis
+├── integrations/         # APIs
+│   ├── fitbit.py         # Fitbit logging
+│   └── gemini.py         # Gemini prompts/chat
+└── src/
+    ├── auth/             # Secure auth/DB
+    │   ├── authentication.py
+    │   └── user_db.py    # SQLite with migrations
+    └── utils/
+        ├──__init__.py
+        └──logger.py
+```
 
-## Run Tests 
-Run unit tests to verify functionality:
-    ```bash
-    python -m unittest discover tests
+# Development Workflow
+As a Git expert, follow this for contributions:
+Branching: git checkout -b feature/[name] (e.g., feature/enhance-chat).
+Commits: Semantic (e.g., git commit -m "feat: added profile validation").
+PRs: Create GitHub PRs with descriptions; self-review for code quality.
+Testing: Run python main.py; verify DB (sqlite3 users.db "SELECT * FROM workout_logs;").
+Linting: Optional: 
+```bash 
+pip install pylint; pylint src/.
+```
 
-## Configuration
--> Workout Data: Edit config/workouts.json to modify workout types, food recommendations, and water intake values.
--> Logging: Logs are stored in fitbit_app.log. Adjust logging settings in src/utils/logger.py.
+Known Limitations & Roadmap
 
-## Dependencies
-bcrypt: For secure password hashing
-requests: For Fitbit API integration
-python-dotenv: For environment variable management
+Offline Mode: Full (JSON/DB); APIs optional.
+Quotas: Monitor Gemini (15 RPM free) and Fitbit rates.
+Roadmap:
+- > Mobile export (CSV/PDF).
+- > Advanced AI (e.g., full plans via Gemini).
+- > Deployment: PyInstaller for .exe or Streamlit for web.
+
+## Troubleshooting
+
+API Errors: Check .env keys; regenerate if invalid.
+DB Issues: Delete users.db and rerun (auto-migrates).
+Matplotlib Backend: If charts fail, add matplotlib.use('TkAgg') to main.py imports.
+Dependencies: Ensure Tkinter (built-in; on Linux: sudo apt install python3-tk).
+
+## Contributing
+Fork the repo, create a feature branch, and submit a PR. Follow PEP 8 for style.
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.txt) file for details.
