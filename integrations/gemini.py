@@ -17,7 +17,7 @@ def configure_gemini():
     if not api_key:
         raise ValueError("GOOGLE_AI_API_KEY not configured in .env")
     genai.configure(api_key=api_key)
-    return genai.GenerativeModel('gemini-2.0-flash')
+    return genai.GenerativeModel('gemini-model')
 
 def generate_workout_recommendation(workout_name: str, duration: int, profile=None, logs=None) -> str:
     try:
