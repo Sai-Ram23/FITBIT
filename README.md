@@ -22,34 +22,47 @@ Google AI Studio API key for Gemini (free tier sufficient).
 
 ## Installation
 Clone the Repository:
-text
-`git clone https://github.com/Sai-Ram23/FITBIT.git`
-`cd FITBIT`
+```bash
+git clone https://github.com/Sai-Ram23/FITBIT.git
+cd FITBIT
+```
 
 # Create a Virtual Environment (Recommended):
-`python -m venv venv`
+```bash
+python -m venv venv
+```
 # On Windows:
-`venv\Scripts\activate`
+```bash
+venv\Scripts\activate
+```
 # On macOS/Linux:
-`source venv/bin/activate`
+```bash
+source venv/bin/activate
+```
 
 # Install Dependencies:
-`pip install -r requirements.txt`
+```bash
+pip install -r requirements.txt
+```
 
 Configure Environment Variables:
-
-Copy .env.example to .env:
-`cp .env .env`
+```bash
+new-item .env
+```
 
 Edit .env:
-`FITBIT_ACCESS_TOKEN=your_fitbit_access_token_here  # From Fitbit OAuth (optional)`
-`GOOGLE_AI_API_KEY=your_gemini_api_key_here  # From https://aistudio.google.com/app/apikey`
+```bash
+FITBIT_ACCESS_TOKEN=your_fitbit_access_token_here  # From Fitbit OAuth (optional)
+GOOGLE_AI_API_KEY=your_gemini_api_key_here  # From https://aistudio.google.com/app/apikey
+```
 
 Note: Never commit .env (ignored in .gitignore).
 
 Database Setup: The app auto-initializes users.db on first run (SQLite—no separate setup).
 Run the Application:
-`python main.py`
+```bash
+python main.py
+```
 
 Signup with profile details → Login → Log workouts → Use chat/analytics.
 
@@ -76,6 +89,7 @@ Click "View Analytics & Chart": Displays Matplotlib bar chart of recent workouts
 AI Personalized Rec: [Gemini tip based on your age/weight/goals]
 Trend Analysis: [Gemini summary of trends]
 ## Project Structure
+```structure
 FITBIT/
 ├── .env.example          # Secrets template
 ├── .gitignore            # Ignores .env, .db, etc.
@@ -97,6 +111,7 @@ FITBIT/
     └── auth/             # Secure auth/DB
         ├── authentication.py
         └── user_db.py    # SQLite with migrations
+```
 
 # Development Workflow
 As a Git expert, follow this for contributions:
@@ -104,7 +119,10 @@ Branching: git checkout -b feature/[name] (e.g., feature/enhance-chat).
 Commits: Semantic (e.g., git commit -m "feat: added profile validation").
 PRs: Create GitHub PRs with descriptions; self-review for code quality.
 Testing: Run python main.py; verify DB (sqlite3 users.db "SELECT * FROM workout_logs;").
-Linting: Optional: pip install pylint; pylint src/.
+Linting: Optional: 
+```bash 
+pip install pylint; pylint src/.
+```
 
 Known Limitations & Roadmap
 
