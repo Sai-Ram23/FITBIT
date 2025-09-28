@@ -111,6 +111,9 @@ FITBIT/
     └── auth/             # Secure auth/DB
         ├── authentication.py
         └── user_db.py    # SQLite with migrations
+    └── utils/
+        ├──__init__.py
+        └──logger.py
 ```
 
 # Development Workflow
@@ -143,4 +146,4 @@ Dependencies: Ensure Tkinter (built-in; on Linux: sudo apt install python3-tk).
 ## Contributing
 Fork the repo, create a feature branch, and submit a PR. Follow PEP 8 for style.
 ## License
-MIT License—feel free to use/modify.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
