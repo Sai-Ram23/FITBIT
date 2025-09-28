@@ -108,9 +108,9 @@ FITBIT/
 │   ├── fitbit.py         # Fitbit logging
 │   └── gemini.py         # Gemini prompts/chat
 └── src/
-    └── auth/             # Secure auth/DB
-        ├── authentication.py
-        └── user_db.py    # SQLite with migrations
+    ├── auth/             # Secure auth/DB
+    │   ├── authentication.py
+    │   └── user_db.py    # SQLite with migrations
     └── utils/
         ├──__init__.py
         └──logger.py
@@ -146,4 +146,4 @@ Dependencies: Ensure Tkinter (built-in; on Linux: sudo apt install python3-tk).
 ## Contributing
 Fork the repo, create a feature branch, and submit a PR. Follow PEP 8 for style.
 ## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.txt) file for details.
